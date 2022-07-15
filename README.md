@@ -18,11 +18,11 @@ cabal test
 
 ### Questions 1 to 10: Lists
 
-- [ ] 1. Find the last element of a list.
-- [ ] 2. Find the last but one element of a list.
-- [ ] 3. Find the K'th element of a list.
-- [ ] 4. Find the number of elements of a list.
-- [ ] 5. Reverse a list.
+- [x] 1. Find the last element of a list.
+- [x] 2. Find the last but one element of a list.
+- [x] 3. Find the K'th element of a list.
+- [x] 4. Find the number of elements of a list.
+- [x] 5. Reverse a list.
 - [ ] 6. Find out whether a list is a palindrome.
 - [ ] 7. Flatten a nested list structure.
 - [ ] 8. Eliminate consecutive duplicates of list elements.
@@ -57,11 +57,6 @@ cabal test
 - [ ] 28A. Sort the elements of this list according to their length.
 - [ ] 28B. Sort the elements of this list according to their length frequency.
 
-### Skipped
-
-- [ ] 29. Skipped
-- [ ] 30. Skipped
-
 ### Questions 31 to 41: Arithmetic
 
 - [ ] 31. Determine whether a given integer number is prime.
@@ -76,13 +71,6 @@ cabal test
 - [ ] 40. Goldbach's conjecture.
 - [ ] 41. Given a range of integers by its lower and upper limit, print a list of all even numbers and their Goldbach composition.
 
-### Skipped
-
-- [ ] 42. Skipped
-- [ ] 43. Skipped
-- [ ] 44. Skipped
-- [ ] 45. Skipped
-
 ### Questions 46 to 50: Logic and codes
 
 - [ ] 46. Write a predicate table/3 which prints the truth table of a given logical expression in two variables.
@@ -90,12 +78,6 @@ cabal test
 - [ ] 48. Truth tables for logical expressions (3).
 - [ ] 49. Gray codes.
 - [ ] 50. Huffman codes.
-
-### Skipped
-
-- [ ] 51. Skipped
-- [ ] 52. Skipped
-- [ ] 53. Skipped
 
 ### Questions 54A to 60: Binary trees
 
@@ -124,10 +106,6 @@ cabal test
 - [ ] 68C. If both the preorder sequence and the inorder sequence of the nodes of a binary tree are given, then the tree is determined unambiguously. Write a predicate pre_in_tree/3 that does the job.
 - [ ] 69. Dotstring representation of binary trees.
 
-### Skipped
-
-- [ ] 70A. Skipped
-
 ### Questions 70B to 73: Multiway trees
 
 - [ ] 70B. Check whether a given term represents a multiway tree.
@@ -136,15 +114,6 @@ cabal test
 - [ ] 71. Determine the internal path length of a tree.
 - [ ] 72. Construct the bottom-up order sequence of the tree nodes.
 - [ ] 73. Lisp-like tree representation.
-
-### Skipped
-
-- [ ] 74. Skipped
-- [ ] 75. Skipped
-- [ ] 76. Skipped
-- [ ] 77. Skipped
-- [ ] 78. Skipped
-- [ ] 79. Skipped
 
 ### Questions 80 to 89: Graphs
 
