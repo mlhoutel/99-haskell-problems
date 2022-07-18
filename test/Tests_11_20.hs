@@ -12,6 +12,10 @@ suite_11_20 =
     [ simpleTuple
       , problem11
       , problem12
+      , problem13
+      , problem14
+      , problem15
+      , problem16
     ]
 
 -- ================== SimpleTuple suite ================== 
@@ -46,3 +50,43 @@ testDecodeChars = testCase "Decode SimpleTuple to Chars" $
 
 problem12:: TestTree
 problem12 = testGroup "Problem 12 suite" [testDecodeInts, testDecodeChars]
+
+-- ================== Problem 13 suite ================== 
+testDirectEncodeInts = testCase "Direct encode Ints to SimpleTuple" $
+              assertEqual [] "[(4, 1), 2, (2, 3), (2, 1), 4, (4, 5)]" (toString (myEncodeDirect [1,1,1,1,2,3,3,1,1,4,5,5,5,5]))
+
+testDirectEncodeChars = testCase "Direct encode Chars to SimpleTuple" $
+                assertEqual [] "[(4, 'a'), 'b', (2, 'c'), (2, 'a'), 'd', (4, 'e')]" (toString (myEncodeDirect "aaaabccaadeeee"))
+
+problem13:: TestTree
+problem13 = testGroup "Problem 13 suite" [testDirectEncodeInts, testDirectEncodeChars]
+
+-- ================== Problem 14 suite ================== 
+testDuplicateInts = testCase "Duplicate with list of Ints" $
+              assertEqual [] [1,1,2,2,3,3] (myDuplicate [1,2,3])
+
+testDuplicateChars = testCase "Duplicate with list of Chars" $
+                assertEqual [] "aabbccdd" (myDuplicate "abcd")
+
+problem14:: TestTree
+problem14 = testGroup "Problem 14 suite" [testDuplicateInts, testDuplicateChars]
+
+-- ================== Problem 15 suite ================== 
+testReplicateInts = testCase "Replicate with list of Ints" $
+              assertEqual [] [1,1,1,2,2,2,3,3,3] (myReplicate [1,2,3] 3)
+
+testReplicateChars = testCase "Replicate with list of Chars" $
+                assertEqual [] "aaaaabbbbb" (myReplicate "ab" 5)
+
+problem15:: TestTree
+problem15 = testGroup "Problem 15 suite" [testReplicateInts, testReplicateChars]
+
+-- ================== Problem 16 suite ================== 
+testDropInts = testCase "Drop with list of Ints" $
+              assertEqual [] [1,2,4,5,7,8] (myDrop [1,2,3,4,5,6,7,8,9] 3)
+
+testDropChars = testCase "Drop with list of Chars" $
+                assertEqual [] "abdeghk" (myDrop "abcdefghik" 3)
+
+problem16:: TestTree
+problem16 = testGroup "Problem 16 suite" [testDropInts, testDropChars]

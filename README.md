@@ -33,10 +33,10 @@ cabal test
 
 - [x] 11. Modified run-length encoding.
 - [x] 12. Decode a run-length encoded list.
-- [ ] 13. Run-length encoding of a list (direct solution).
-- [ ] 14. Duplicate the elements of a list.
-- [ ] 15. Replicate the elements of a list a given number of times.
-- [ ] 16. Drop every N'th element from a list.
+- [x] 13. Run-length encoding of a list (direct solution).
+- [x] 14. Duplicate the elements of a list.
+- [x] 15. Replicate the elements of a list a given number of times.
+- [x] 16. Drop every N'th element from a list.
 - [ ] 17. Split a list into two parts; the length of the first part is given.
 - [ ] 18. Extract a slice from a list.
 - [ ] 19. Rotate a list N places to the left.
