@@ -23,16 +23,16 @@ cabal test
 - [x] 3. Find the K'th element of a list.
 - [x] 4. Find the number of elements of a list.
 - [x] 5. Reverse a list.
-- [ ] 6. Find out whether a list is a palindrome.
-- [ ] 7. Flatten a nested list structure.
-- [ ] 8. Eliminate consecutive duplicates of list elements.
-- [ ] 9. Pack consecutive duplicates of list elements into sublists.
-- [ ] 10. Run-length encoding of a list.
+- [x] 6. Find out whether a list is a palindrome.
+- [x] 7. Flatten a nested list structure.
+- [x] 8. Eliminate consecutive duplicates of list elements.
+- [x] 9. Pack consecutive duplicates of list elements into sublists.
+- [x] 10. Run-length encoding of a list.
 
 ### Questions 11 to 20: Lists, continued
 
-- [ ] 11. Modified run-length encoding.
-- [ ] 12. Decode a run-length encoded list.
+- [x] 11. Modified run-length encoding.
+- [x] 12. Decode a run-length encoded list.
 - [ ] 13. Run-length encoding of a list (direct solution).
 - [ ] 14. Duplicate the elements of a list.
 - [ ] 15. Replicate the elements of a list a given number of times.
