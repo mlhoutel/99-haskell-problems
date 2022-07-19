@@ -61,3 +61,31 @@ myDrop ls n = myDrop' ls n
             myDrop' [] _ = []
             myDrop' (x:xs) 1 = myDrop' xs n
             myDrop' (x:xs) c = x : (myDrop' xs (c-1))
+
+-- 17. Split a list into two parts; the length of the first part is given.
+mySplit :: [a] -> Int -> ([a], [a])
+mySplit ls n = mySplit' ls [] n
+    where   mySplit' :: [a] -> [a] -> Int -> ([a], [a])
+            mySplit' [] lx _ = (lx, [])
+            mySplit' ls lx 0 = (lx, ls)
+            mySplit' (x:xs) lx c = (mySplit' xs (lx ++ [x]) (c - 1))
+
+-- 18. Extract a slice from a list..
+mySlice :: [a] -> Int -> Int -> [a]
+mySlice ls s e = snd (mySplit (fst (mySplit ls e)) (s - 1))
+
+-- 19. Rotate a list N places to the left.
+myRotate :: [a] -> Int -> [a]
+myRotate ls n
+    | n > 0 = (snd lx) ++ (fst lx)
+    | n < 0 = (snd ly) ++ (fst ly)
+    | otherwise = ls
+    where
+        lx = mySplit ls n
+        ly = mySplit ls ((length ls) + (n + 1))
+
+-- 20. Remove the K'th element from a list
+myRemove :: [a] -> Int -> [a]
+myRemove [] _ = []
+myRemove (x:xs) 1 = xs
+myRemove (x:xs) c = x : (myRemove xs (c - 1))

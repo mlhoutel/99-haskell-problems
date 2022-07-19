@@ -16,6 +16,9 @@ suite_11_20 =
       , problem14
       , problem15
       , problem16
+      , problem17
+      , problem18
+      , problem19
     ]
 
 -- ================== SimpleTuple suite ================== 
@@ -90,3 +93,46 @@ testDropChars = testCase "Drop with list of Chars" $
 
 problem16:: TestTree
 problem16 = testGroup "Problem 16 suite" [testDropInts, testDropChars]
+
+-- ================== Problem 17 suite ================== 
+testSplitInts = testCase "Split with list of Ints" $
+                assertEqual [] ([1, 2, 3, 4, 5], [6, 7, 8, 9]) (mySplit [1, 2, 3, 4, 5, 6, 7, 8, 9] 5)
+
+testSplitChars = testCase "Split with list of Chars" $
+                assertEqual [] ("abc", "defghik") (mySplit "abcdefghik" 3)
+
+problem17:: TestTree
+problem17 = testGroup "Problem 17 suite" [testSplitInts, testSplitChars]
+
+-- ================== Problem 18 suite ================== 
+testSliceInts = testCase "Slice with list of Ints" $
+                assertEqual [] [2, 3, 4, 5] (mySlice [1, 2, 3, 4, 5, 6, 7, 8, 9] 2 5)
+
+testSliceChars = testCase "Slice with list of Chars" $
+                assertEqual [] "cdefg" (mySlice "abcdefghik" 3 7)
+
+problem18:: TestTree
+problem18 = testGroup "Problem 18 suite" [testSliceInts, testSliceChars]
+
+-- ================== Problem 19 suite ================== 
+testRotateInts = testCase "Rotate with list of Ints" $
+                assertEqual [] [3, 4, 5, 1, 2] (myRotate [1, 2, 3, 4, 5] 2)
+
+testRotateChars = testCase "Rotate with list of Chars" $
+                assertEqual [] "defghabc" (myRotate "abcdefgh" 3)
+
+testRotateNegative = testCase "Rotate with Negative index" $
+                assertEqual [] "ghabcdef" (myRotate "abcdefgh" (-3))
+
+problem19:: TestTree
+problem19 = testGroup "Problem 19 suite" [testRotateInts, testRotateChars, testRotateNegative]
+
+-- ================== Problem 20 suite ================== 
+testRemoveInts = testCase "Remove with list of Ints" $
+                assertEqual [] [1, 3, 4, 5] (myRotate [1, 2, 3, 4, 5] 2)
+
+testRemoveChars = testCase "Remove with list of Chars" $
+                assertEqual [] "abdefgh" (myRotate "abcdefgh" 3)
+
+problem20:: TestTree
+problem20 = testGroup "Problem 20 suite" [testRotateInts, testRotateChars]
